@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mosab97/devcamper-api-mine.git"
+    "url": ""
   },
   "author": "Mosab Irwished",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Mosab97/devcamper-api-mine/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/Mosab97/devcamper-api-mine#readme",
+  "homepage": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
