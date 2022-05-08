@@ -8,20 +8,25 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add a name'],
   },
+  account_number: {
+    type: String,
+    unique: true,
+    required: [true, 'Please add an account number'],
+  },
   email: {
     type: String,
-    required: [true, 'Please add an email'],
-    unique: true,
-    match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      'Please add a valid email',
-    ],
+    // required: [true, 'Please add an email'],
+    // unique: true,
+    // match: [
+    //   /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+    //   'Please add a valid email',
+    // ],
   },
-  role: {
-    type: String,
-    enum: ['user', 'publisher'],
-    default: 'user',
-  },
+  // role: {
+  //   type: String,
+  //   enum: ['user', 'publisher'],
+  //   default: 'user',
+  // },
   password: {
     type: String,
     required: [true, 'Please add a password'],

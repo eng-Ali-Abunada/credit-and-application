@@ -20,11 +20,8 @@ dotenv.config({ path: './config/config.env' });
 // Connect to database
 connectDB();
 // Route files
-const bootcamps = require('./router/bootcamps');
-const courses = require('./router/courses');
 const auth = require('./router/auth');
 const users = require('./router/users');
-const reviews = require('./router/reviews');
 
 const app = express();
 
@@ -66,11 +63,7 @@ app.use(hpp());
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 // Mount routers
-app.use('/api/v1/bootcamps', bootcamps);
-app.use('/api/v1/courses', courses);
 app.use('/api/v1/auth', auth);
-app.use('/api/v1/users', users);
-app.use('/api/v1/reviews', reviews);
 app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
